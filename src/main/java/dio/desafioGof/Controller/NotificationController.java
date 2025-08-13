@@ -15,7 +15,7 @@ public class NotificationController {
         this.notificationFacade = notificationFacade;
     }
 
-    //Metodo get para poder testar no navegador exemplo http://localhost:8080/notify/sms?receiver="guilherme"&msg="olá"
+    //Metodo get para poder testar no navegador exemplo http://localhost:8080/notify/email?receiver="uilherme&msg=olá
     @GetMapping("/email")
     public String sendEmail(@RequestParam String receiver, @RequestParam String msg) {
         notificationFacade.sendEmail(receiver, msg);
